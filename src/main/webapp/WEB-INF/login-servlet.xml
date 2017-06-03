@@ -6,9 +6,11 @@
         http://www.springframework.org/schema/mvc http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
-	<context:component-scan base-package="com.springmvc.test" /> <!-- this is to map the test controller using annotations -->
-	<context:component-scan base-package="com.springmvc.login" /><!-- this is to map the login controller using annotations -->
-	<context:component-scan base-package="com.springmvc.todo" /><!-- this is to map the login controller using annotations -->
+	<context:component-scan base-package="com.springmvc.test" /> <!-- this is to map the package using annotations -->
+	<context:component-scan base-package="com.springmvc.login" /><!-- this is to map the package using annotations -->
+	<context:component-scan base-package="com.springmvc.todo" /><!-- this is to map the package using annotations -->
+	<context:component-scan base-package="com.springmvc.security" /><!-- this is to map the package using annotations -->
+	<context:component-scan base-package="com.springmvc.rest" /><!-- this is to map the package using annotations -->
 	
 	
 	<!-- this bean is used to allow the servlet to pass the argument with prefix and postfix defined below -->
@@ -21,6 +23,27 @@
         </property>
     </bean> 
     
+    <!-- Start of code for internationalization -->
+    <bean id="messageSource"
+		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
+		<property name="basename" value="classpath:messages" />
+		<property name="defaultEncoding" value="UTF-8" />
+	</bean>
+
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
+		<property name="defaultLocale" value="en" />
+	</bean>
+	
+	<mvc:interceptors>
+		<bean id="localeChangeInterceptor"
+			class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor">
+			<property name="paramName" value="language" />
+		</bean>
+	</mvc:interceptors>
+	<!-- End of code for internationalization -->
+    
+    <!-- below code is used when you want to define the js/css links =to bootstrao and custome js/css -->
     <mvc:resources mapping="/webjars/**" location="/webjars/"/>
     <mvc:resources mapping="/customResources/**" location="/WEB-INF/views/customResources/login/" />
     <mvc:annotation-driven />

@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 @Controller
 @SessionAttributes("nameParam")
-public class LoginController {
+public class LoginControllerDisabled {
 	
 	//variable to hold the APP view home directory for request mapping
 	private static String appView = "loginview";
@@ -19,7 +19,7 @@ public class LoginController {
 	
 	// Set the login Service using dependency injection as an Auto-Wired
 	@Autowired
-	LoginService loginService;
+	LoginServiceDisabled loginService;
 
 	/**
 	 * using the request mapping of"/showmessage" the servlet finds and executes the sayHi() method using the controller "LoginController"
@@ -38,12 +38,13 @@ public class LoginController {
 	 * method 	-> this is the type of acceptable method to be used
 	 * @return view named login
 	 */
+	
 	@RequestMapping(value = "/login", method = RequestMethod.GET) //using the request mapping of"/login" the servlet finds and executes the say hello method using the controller "LoginController"
 	public String showLoginPage() {
+			
 		//the returned page name
 		return appView+"/login";
 	}
-	
 	
 	/**
 	 * the method below will return the name of the file to show when called
@@ -71,8 +72,5 @@ public class LoginController {
 			return appView+"/login";
 		}
 	}
-	
-	
-	
 	
 }

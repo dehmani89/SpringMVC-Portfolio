@@ -12,7 +12,8 @@
 <!-- MAIN CONTENT OF THE PAGE GOES HERE --> 
 <div class="container">
 <table class="table table-striped">
-	<caption>Your Todos Are</caption>
+	<!-- Custom spring tag below used for internationalization (see header.jspf) -->
+	<caption><spring:message code="todo.caption"/></caption>
 		<thead>
 			<tr>
 				<th>Description</th>
@@ -36,7 +37,7 @@
 </table>
 
 <div>
-	<a class="btn btn-success" href="/add-todo">Submit!</a>
+	<a class="btn btn-success" href="/add-todo">Add!</a>
 </div>
 
 </div>

@@ -11,11 +11,8 @@
 
 <!-- MAIN CONTENT OF THE PAGE GOES HERE --> 
 <div class="container">
-<!-- Custom spring tag below used for internationalization (see header.jspf) -->
-<h2><spring:message code="greeting.caption"/> ${name}</h2>
 
-	<p>Now, You can <a href="/list-todos"> Manage your todos</a></p>
-
+<p>Application has encountered an Error Please contact Support @ 012-345-6789</p>
 
 </div>
 

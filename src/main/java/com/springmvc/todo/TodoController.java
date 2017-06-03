@@ -2,13 +2,21 @@ package com.springmvc.todo;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
+import javax.servlet.http.HttpServletRequest;
 import javax.validation.Valid;
+
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -19,6 +27,8 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 @SessionAttributes("nameParam")
 public class TodoController {
 	
+	private Log logger = LogFactory.getLog(TodoController.class);
+
 	//variable to hold the APP view home directory for request mapping
 	private static String appView = "todoview";
 	
@@ -26,13 +36,16 @@ public class TodoController {
 	@Autowired
 	TodoService todoService;
 	
-	
+	/**
+	 * @param binder
+	 * This will bind the date class to format all dates as dd/mm/yy
+	 * this method is used to format output
+	 */
 	@InitBinder
 	protected void initBinder(WebDataBinder binder) {
 		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
 		binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, false));
 	}
-	
 	
 	/**
 	 * the method below will return the name of the file to show when called
@@ -43,10 +56,26 @@ public class TodoController {
 	@RequestMapping(value = "/list-todos", method = RequestMethod.GET) //using the request mapping of"/list-todos" the servlet finds and executes the showListTodosPage method using the controller "TodoController"
 	public String showTodos(ModelMap model) {
 		
-		model.addAttribute("todos", todoService.retrieveTodos("amine89"));
+		//add the user name in the model for the navigation access
+		model.put("name", retrieveLoggedinUserName());
+		
+		model.addAttribute("todos", todoService.retrieveTodos(retrieveLoggedinUserName()));
 		
 		//the returned page name
 		return appView+"/list-todos";
+	}
+
+	/**
+	 * 
+	 * @return principal (which is the user name that is logged in)
+	 */
+	private String retrieveLoggedinUserName() {
+		Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+
+		if (principal instanceof UserDetails){
+			return ((UserDetails) principal).getUsername();
+		}
+		return principal.toString();		
 	}
 	
 	/**
@@ -57,14 +86,17 @@ public class TodoController {
 	 */
 	@RequestMapping(value = "/add-todo", method = RequestMethod.GET) //using the request mapping of"/add-todo" the servlet finds and executes the showListTodosPage method using the controller "TodoController"
 	public String showAddTodo(ModelMap model) {
-		
-		//The model being added here corresponds with the commandName="todo" spring form binding tag on the todo "view"
-		model.addAttribute("todo", new Todo(0, "amine89", "", new Date(), false));
-		
-		//the returned page name
-		return appView+"/todo";	
+		System.out.println("About to launch the exception specific todoview../common/error-specific-page");
+		throw new RuntimeException("Dummy Exception");
 	}
+
 	
+	@ExceptionHandler(value = Exception.class)
+	public String handleException(HttpServletRequest req, Exception exception) {
+		System.out.println("let's throw this thing");
+		logger.error("Request: " + req.getRequestURL() + " raised " + exception);
+		return "common/error-specific-page";
+	}
 	
 	
 	/**
@@ -80,7 +112,7 @@ public class TodoController {
 		if(result.hasErrors()){
 			return appView+"/todo";
 		}
-		todoService.addTodo("amine89", todo.getDesc(), new Date(), false);
+		todoService.addTodo(retrieveLoggedinUserName(), todo.getDesc(), new Date(), false);
 		model.clear();
 		//the returned page name
 		return "redirect:/list-todos";	//return to the list todos after a new item is added by using the redirect directive
@@ -130,7 +162,7 @@ public class TodoController {
 		if(result.hasErrors()){
 			return appView+"/todo";
 		}
-		todo.setUser("amine89");
+		todo.setUser(retrieveLoggedinUserName());
 		
 		todoService.updateTodo(todo);
 		

@@ -24,5 +24,19 @@
         <url-pattern>/</url-pattern><!-- this is the application path we want the servlet to use, when typing in the url /spring-mvc. The dispatcher servlet gets called-->
     </servlet-mapping>
     
-    
+    <!-- The below two filters are used when we implement the Spring Security for authenticating users -->
+	 <filter>
+    		<filter-name>springSecurityFilterChain</filter-name>
+    		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+   </filter>
+ 
+   <filter-mapping>
+   		<filter-name>springSecurityFilterChain</filter-name>
+    		<url-pattern>/*</url-pattern>
+   </filter-mapping>
+
+	<!--The below error page is used as a generic exception and is defined in the ExceptionController  -->
+ 	<error-page>
+		    <location>/WEB-INF/views/common/error.jsp</location>
+	</error-page>
 </web-app>

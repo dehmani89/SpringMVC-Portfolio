@@ -1,6 +1,192 @@
+
+
+
+<!-- Main Footer -->
+  <footer class="main-footer">
+    <!-- To the right -->
+    <div class="pull-right hidden-xs">
+      Anything you want
+    </div>
+    <!-- Default to the left -->
+    <strong>Copyright &copy; 2016 <a href="#">Company</a>.</strong> All rights reserved.
+  </footer>
+  
+
+
 <!-- LOAD JS FILES HERE -->		
-<script src="webjars/jquery/1.9.1/jquery.min.js"></script>
+<script src="webjars/jquery/2.2.3/jquery.min.js"></script>
 <script src="webjars/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-	    
+<script src="webjars/bootstrap-datepicker/1.6.1/js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript" src="<c:url value="/adminTemplateJS/app.min.js" />"></script>
+
+<!-- HighChart JS -->
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+
+<!-- Custom Js externalize -->
+<script type="text/javascript">
+  
+<!-- Wizard Start-->  
+$(document).ready(function () {
+  var navListItems = $('div.setup-panel div a'),
+          allWells = $('.setup-content'),
+          allNextBtn = $('.nextBtn');
+
+  allWells.hide();
+
+  navListItems.click(function (e) {
+      e.preventDefault();
+      var $target = $($(this).attr('href')),
+              $item = $(this);
+
+      if (!$item.hasClass('disabled')) {
+          navListItems.removeClass('btn-primary').addClass('btn-default');
+          $item.addClass('btn-primary');
+          allWells.hide();
+          $target.show();
+          $target.find('input:eq(0)').focus();
+      }
+  });
+
+  allNextBtn.click(function(){
+      var curStep = $(this).closest(".setup-content"),
+          curStepBtn = curStep.attr("id"),
+          nextStepWizard = $('div.setup-panel div a[href="#' + curStepBtn + '"]').parent().next().children("a"),
+          curInputs = curStep.find("input[type='text'],input[type='url']"),
+          isValid = true;
+
+      $(".form-group").removeClass("has-error");
+      for(var i=0; i<curInputs.length; i++){
+          if (!curInputs[i].validity.valid){
+              isValid = false;
+              $(curInputs[i]).closest(".form-group").addClass("has-error");
+          }
+      }
+
+      if (isValid)
+          nextStepWizard.removeAttr('disabled').trigger('click');
+  });
+
+  $('div.setup-panel div a.btn-primary').trigger('click');
+});
+
+
+
+//High Chart Code # 1
+Highcharts.chart('containerChart', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Graphical Representation of Funds and their allocations'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Brands',
+        colorByPoint: true,
+        data: [{
+            name: 'Northern Lights Variable Trust',
+            y: 50.00
+        }, {
+            name: 'Northern Lights Variable Trust',
+            y: 25.00,
+            sliced: true,
+            selected: true
+        }, {
+            name: 'Ohio National Fund, Inc.',
+            y: 25.00
+        }]
+    }]
+});
+
+
+//High Chart code # 2
+Highcharts.chart('containerChartLegend', {
+        chart: {
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            type: 'pie'
+        },
+        title: {
+            text: 'Graphical Representation of Funds and their allocations'
+        },
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+        },
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: false
+                },
+                showInLegend: true,
+                point:{
+                    events : {
+                     legendItemClick: function(e){
+                         e.preventDefault();
+                     }
+                    }
+                }
+            }
+        },
+        series: [{
+            name: 'Brands',
+            colorByPoint: true,
+            data: [{
+                name: 'Northern Lights Variable Trust',
+                y: 50.00
+            }, {
+                name: 'Northern Lights Variable Trust',
+                y: 25.00,
+                sliced: true,
+                selected: true
+            }, {
+                name: 'Ohio National Fund, Inc.',
+                y: 25.00
+            }]
+        }]
+    });
+
+//Contact Us Code
+$('#characterLeft').text('140 characters left');
+    $('#message').keydown(function () {
+        var max = 140;
+        var len = $(this).val().length;
+        if (len >= max) {
+            $('#characterLeft').text('You have reached the limit');
+            $('#characterLeft').addClass('red');
+            $('#btnSubmit').addClass('disabled');            
+        } 
+        else {
+            var ch = max - len;
+            $('#characterLeft').text(ch + ' characters left');
+            $('#btnSubmit').removeClass('disabled');
+            $('#characterLeft').removeClass('red');            
+        }
+    });    
+</script>	
+
+
+
 </body>
 </html>

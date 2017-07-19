@@ -24,17 +24,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 @Controller
-@SessionAttributes("nameParam")
+@SessionAttributes("name")
 public class TodoController {
 	
-	private Log logger = LogFactory.getLog(TodoController.class);
+	private Log log = LogFactory.getLog(TodoController.class);
 
 	//variable to hold the APP view home directory for request mapping
 	private static String appView = "todoview";
 	
-	// Set the TODO Service using dependency injection as an Auto-Wired
+	// Set the todoDAO Service using dependency injection as an Auto-Wired
 	@Autowired
-	TodoService todoService;
+	TodoDAOService todoDAO;
 	
 	/**
 	 * @param binder
@@ -43,7 +43,7 @@ public class TodoController {
 	 */
 	@InitBinder
 	protected void initBinder(WebDataBinder binder) {
-		SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
 		binder.registerCustomEditor(Date.class, new CustomDateEditor(dateFormat, false));
 	}
 	
@@ -57,9 +57,13 @@ public class TodoController {
 	public String showTodos(ModelMap model) {
 		
 		//add the user name in the model for the navigation access
-		model.put("name", retrieveLoggedinUserName());
+		//model.put("name", retrieveLoggedinUserName());
 		
-		model.addAttribute("todos", todoService.retrieveTodos(retrieveLoggedinUserName()));
+		//retrieve a list of todos from the database based on a user
+		
+		//add the list todos to the model, so that the front end will have some data to show
+		model.addAttribute("todos", todoDAO.getListOfTodos(retrieveLoggedinUserName()));
+		//model.addAttribute("todos", todoService.retrieveTodos(retrieveLoggedinUserName()));
 		
 		//the returned page name
 		return appView+"/list-todos";
@@ -86,18 +90,16 @@ public class TodoController {
 	 */
 	@RequestMapping(value = "/add-todo", method = RequestMethod.GET) //using the request mapping of"/add-todo" the servlet finds and executes the showListTodosPage method using the controller "TodoController"
 	public String showAddTodo(ModelMap model) {
-		System.out.println("About to launch the exception specific todoview../common/error-specific-page");
-		throw new RuntimeException("Dummy Exception");
+		//System.out.println("About to launch the exception specific todoview../common/error-specific-page");
+		//throw new RuntimeException("Dummy Exception");
+		System.out.println("I'm HERE HERE HERE2222222222");
+		//add the user name in the model for the navigation access
+		model.put("name", retrieveLoggedinUserName());
+		
+		model.addAttribute("todo", new Todo(0, retrieveLoggedinUserName(), "Enter a Description","2012-12-12", false));
+		return appView+"/todo";
+		
 	}
-
-	
-	@ExceptionHandler(value = Exception.class)
-	public String handleException(HttpServletRequest req, Exception exception) {
-		System.out.println("let's throw this thing");
-		logger.error("Request: " + req.getRequestURL() + " raised " + exception);
-		return "common/error-specific-page";
-	}
-	
 	
 	/**
 	 * the method below will return the name of the file to show when called
@@ -108,11 +110,13 @@ public class TodoController {
 	@RequestMapping(value = "/add-todo", method = RequestMethod.POST) //using the request mapping of"/add-todo" the servlet finds and executes the showListTodosPage method using the controller "TodoController"
 	//public String addTodo(ModelMap model, @RequestParam String desc) { you can use the @RequestParam to pass param or pass an entire object	
 	public String addTodo(ModelMap model, @Valid Todo todo, BindingResult result) {
-		
+		System.out.println("I'm HERE HERE HERE\n" + todo.getDesc() + " - " + todo.getTargetDate());
 		if(result.hasErrors()){
 			return appView+"/todo";
 		}
-		todoService.addTodo(retrieveLoggedinUserName(), todo.getDesc(), new Date(), false);
+		//todoService.addTodo(retrieveLoggedinUserName(), todo.getDesc(), new Date(), false);
+		todoDAO.insertTodoByUsername(retrieveLoggedinUserName(), todo.getDesc(), todo.getTargetDate(), false);
+		
 		model.clear();
 		//the returned page name
 		return "redirect:/list-todos";	//return to the list todos after a new item is added by using the redirect directive
@@ -125,9 +129,10 @@ public class TodoController {
 	 * @return view named list-todo
 	 */
 	@RequestMapping(value = "/delete-todo", method = RequestMethod.GET) //using the request mapping of"/add-todo" the servlet finds and executes the showListTodosPage method using the controller "TodoController"
-	public String deleteTodo(ModelMap model, @RequestParam int id) {
+	public String deleteTodo(ModelMap model, @RequestParam String id) {
 				
-		todoService.deleteTodo(id);
+		//todoService.deleteTodo(id);
+		todoDAO.deleteTodo(id,"amine89");
 		model.clear();
 		//the returned page name
 		return "redirect:/list-todos";	//return to the list todos after a new item is added by using the redirect directive
@@ -141,8 +146,9 @@ public class TodoController {
 	 */
 	@RequestMapping(value = "/update-todo", method = RequestMethod.GET) //using the request mapping of"/add-todo" the servlet finds and executes the showListTodosPage method using the controller "TodoController"
 	public String updateTodo(ModelMap model, @RequestParam int id) {
-				
-		Todo todo = todoService.retrieveTodo(id);
+		log.info("inside /update-todo");		
+		//Todo todo = todoService.retrieveTodo(id);
+		Todo todo = todoDAO.getATodoByID_USERNAME(id, retrieveLoggedinUserName());
 		model.addAttribute(todo);
 		
 		//the returned page name
@@ -164,9 +170,19 @@ public class TodoController {
 		}
 		todo.setUser(retrieveLoggedinUserName());
 		
-		todoService.updateTodo(todo);
+		//todoService.updateTodo(todo);
+		todoDAO.updateTodo(todo.getDesc(), todo.getTargetDate(), todo.getId(), todo.getUser());
 		
 		//the returned page name
 		return "redirect:/list-todos";	//return to the list todos after a new item is added by using the redirect directive
 	}
+	
+	/*
+	@ExceptionHandler(value = Exception.class)
+	public String handleException(HttpServletRequest req, Exception exception) {
+		System.out.println("let's throw this thing");
+		logger.error("Request: " + req.getRequestURL() + " raised " + exception);
+		return "common/error-specific-page";
+	}
+	*/
 }

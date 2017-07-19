@@ -1,0 +1,56 @@
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+
+<div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title">Latest Statements</h3>
+
+              <div class="box-tools pull-right">
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                </button>
+              </div>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="table-responsive">
+                <table class="table no-margin">
+                  <thead>
+                  <tr>
+                    <th>Statement date</th>
+                    <th>file</th>
+                    <th>Frequency</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <tr>
+                    <td><a href="#">07-15-2017</a></td>
+                    <td>Call of Duty IV</td>
+                    <td><span class="label label-success">Monthly</span></td>
+                  </tr>
+                  <tr>
+                    <td><a href="#">06-15-2017</a></td>
+                    <td>Samsung Smart TV</td>
+                    <td><span class="label label-warning">Quarterly</span></td>
+                   
+                  </tr>
+                  <tr>
+                    <td><a href="#">05-15-2017</a></td>
+                    <td>iPhone 6 Plus</td>
+                    <td><span class="label label-danger">Yearly</span></td>
+                    
+                  </tr>
+                  <tr>
+                    <td><a href="#">04-15-2017</a></td>
+                    <td>Samsung Smart TV</td>
+                    <td><span class="label label-info">Taxes</span></td>
+                    
+                  </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.table-responsive -->
+            </div>
+            <!-- /.box-body -->
+          </div>
+
+
+</div>

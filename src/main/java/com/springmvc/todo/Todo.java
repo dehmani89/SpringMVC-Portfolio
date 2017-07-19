@@ -1,7 +1,5 @@
 package com.springmvc.todo;
 
-import java.util.Date;
-
 import javax.validation.constraints.Size;
 
 public class Todo {
@@ -13,20 +11,20 @@ public class Todo {
 	@Size(min = 10, message = "Enter atleast 10 Characters.")
 	private String desc;
 	
-	private Date targetDate;
-	private boolean isDone;
+	private String targetDate;
+	private boolean isCompleted;
 
 	//default constructor
 	public Todo(){
 		
 	}
-	public Todo(int id, String user, String desc, Date targetDate, boolean isDone) {
+	public Todo(int id, String user, String desc, String targetDate, boolean isCompleted) {
 		super();
 		this.id = id;
 		this.user = user;
 		this.desc = desc;
 		this.targetDate = targetDate;
-		this.isDone = isDone;
+		this.isCompleted = isCompleted;
 	}
 
 	/**
@@ -74,68 +72,28 @@ public class Todo {
 	/**
 	 * @return the targetDate
 	 */
-	public Date getTargetDate() {
+	public String getTargetDate() {
 		return targetDate;
 	}
 
 	/**
 	 * @param targetDate the targetDate to set
 	 */
-	public void setTargetDate(Date targetDate) {
+	public void setTargetDate(String targetDate) {
 		this.targetDate = targetDate;
 	}
 
 	/**
-	 * @return the isDone
+	 * @return the isCompleted
 	 */
 	public boolean isDone() {
-		return isDone;
+		return isCompleted;
 	}
 
 	/**
-	 * @param isDone the isDone to set
+	 * @param isCompleted the isCompleted to set
 	 */
-	public void setDone(boolean isDone) {
-		this.isDone = isDone;
-	}
-	
-	/** (non-Javadoc)
-	 * @see java.lang.Object#toString()
-	 */
-	@Override
-	public String toString() {
-		return String.format("Todo [id=%s, user=%s, desc=%s, targetDate=%s, isDone=%s]", id, user, desc, targetDate,
-				isDone);
-	}
-
-	/* (non-Javadoc)
-	 * @see java.lang.Object#hashCode()
-	 */
-	@Override
-	public int hashCode() {
-		final int prime = 31;
-		int result = 1;
-		result = prime * result + id;
-		return result;
-	}
-
-	/* (non-Javadoc)
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	@Override
-	public boolean equals(Object obj) {
-		if (this == obj)
-			return true;
-		if (obj == null)
-			return false;
-		if (getClass() != obj.getClass())
-			return false;
-		Todo other = (Todo) obj;
-		if (id != other.id)
-			return false;
-		return true;
-	}
-
-
-	
+	public void setDone(boolean isCompleted) {
+		this.isCompleted = isCompleted;
+	}	
 }

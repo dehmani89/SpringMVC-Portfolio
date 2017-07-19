@@ -8,13 +8,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.springmvc.todo.Todo;
-import com.springmvc.todo.TodoService;
+import com.springmvc.todo.TodoDAOService;
 
 @RestController
 public class RestTodoController {
 
 	@Autowired
-	TodoService service;
+	//TodoService service;
+	TodoDAOService service;
 	
 	/**
 	 * @RequestMapping(path="/todos") the path param here is used to identify the rest web service
@@ -22,7 +23,7 @@ public class RestTodoController {
 	 */
 	@RequestMapping(path="/todos")
 	public List<Todo> retrieveAllTodos(){
-		List<Todo> users = service.retrieveTodos("amine89");
+		List<Todo> users = service.getListOfTodos("amine89");//hard code user name for now
 		return users;
 	}
 	
@@ -34,7 +35,7 @@ public class RestTodoController {
 	 */
 	@RequestMapping(path="/todos/{id}")
 	public Todo retrieveTodo(@PathVariable int id){
-		Todo todo = service.retrieveTodo(id);
+		Todo todo = service.getATodoByID_USERNAME(id, "amine89");//hard code user name for now
 		return todo;
 	}
 	

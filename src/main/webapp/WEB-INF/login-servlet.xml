@@ -12,7 +12,8 @@
 	<context:component-scan base-package="com.springmvc.security" /><!-- this is to map the package using annotations -->
 	<context:component-scan base-package="com.springmvc.rest" /><!-- this is to map the package using annotations -->
 	
-	
+	<context:component-scan base-package="com.springmvc.*" /><!-- this is to map the package using annotations -->
+		
 	<!-- this bean is used to allow the servlet to pass the argument with prefix and postfix defined below -->
 	<bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"> <!-- this class resolves internal resource viewer "routing to the appropriate resources as defined" -->
         <property name="prefix">
@@ -45,7 +46,14 @@
     
     <!-- below code is used when you want to define the js/css links =to bootstrao and custome js/css -->
     <mvc:resources mapping="/webjars/**" location="/webjars/"/>
-    <mvc:resources mapping="/customResources/**" location="/WEB-INF/views/customResources/login/" />
+    <mvc:resources mapping="/loginStyles/**" location="/WEB-INF/views/customResources/login/" />
+    <mvc:resources mapping="/adminTemplateCss/**" location="/WEB-INF/views/customResources/dist/css/" />
+    <mvc:resources mapping="/adminTemplateSkins/**" location="/WEB-INF/views/customResources/dist/css/skins/" />
+    <!-- Javascript custom -->
+    <mvc:resources mapping="/adminTemplateJS/**" location="/WEB-INF/views/customResources/dist/js/" />
+    <!-- Images Custom -->
+    <mvc:resources mapping="/adminTemplateImg/**" location="/WEB-INF/views/customResources/dist/img/" />
+    
     <mvc:annotation-driven />
 <!-- 
 	<mvc:resources mapping="/webjars/**" location="/webjars/"/>

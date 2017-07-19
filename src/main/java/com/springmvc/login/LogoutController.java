@@ -12,6 +12,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 public class LogoutController {
+	
+	//variable to hold the APP view home directory for request mapping
+	private static String appView = "loginview";
 		
 	/**
 	 * @param request
@@ -36,6 +39,7 @@ public class LogoutController {
 		}
 		
 		//the returned page name
+		//return "redirect:/";
 		return "redirect:/";
 	}
 }

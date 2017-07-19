@@ -8,13 +8,29 @@
 <!-- Navigation Bar FRAGMENT --> 
 <%@include file="../common/navigation.jspf" %>
 
-
 <!-- MAIN CONTENT OF THE PAGE GOES HERE --> 
-<div class="container">
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        <!-- Custom spring tag below used for internationalization (see header.jspf) -->
+        <spring:message code="greeting.caption"/> ${name}
+        <small>Preview</small>
+      </h1>
+    </section>
 
-<p>Application has encountered an Error Please contact Support @ 012-345-6789</p>
-
+    <!-- Main content -->
+    <section class="content">
+    	<div class="row">
+    		<div class="col-xs-12">
+				<p>Application has encountered an Error Please contact Support @ 012-345-6789</p>
+    		</div>
+    		
+    	</div>
+    </section>
+    <!-- /.content -->
 </div>
+  
 
 <!-- FOOTER FRAGMENT --> 
 <%@include file="../common/footer.jspf" %>

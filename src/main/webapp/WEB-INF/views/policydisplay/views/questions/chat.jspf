@@ -1,0 +1,161 @@
+<!-- Large modal -->
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<a href="#" class="btn btn-default btn-flat" data-toggle="modal" data-target="#contactUsModal">Contact Us</a>
+<a href="#" class="btn btn-primary btn-flat" data-toggle="modal" data-target="#contactUsModal">Contact Us</a>  
+<a href="#" class="btn btn-warning btn-flat" data-toggle="modal" data-target="#contactUsModal">Contact Us</a>  
+<a href="#" class="btn btn-danger btn-flat" data-toggle="modal" data-target="#contactUsModal">Contact Us</a>  
+<a href="#" class="btn btn-info btn-flat" data-toggle="modal" data-target="#contactUsModal">Contact Us</a>  
+<a href="#" class="btn btn-success btn-flat" data-toggle="modal" data-target="#contactUsModal">Contact Us</a>  
+</div>
+<br>
+<br>
+<!-- User Profile model content -->
+	<div class="modal fade" id="contactUsModal" tabindex="-1" role="dialog" aria-labelledby="contactUsModalLabel">
+	  <div class="modal-dialog modal-md" role="document">
+	    <div class="modal-content">
+	    <!-- The content of the model lives in the profile page -->  
+	    <div class="modal-header">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <h4 class="modal-title text-center" id="profileModalLabel">Questions/Comments or concerns!</h4>
+  <h4 class="modal-title text-center" id="profileModalLabel">We are here to help</h4>
+</div>
+<div class="modal-body"> <!--  OPEN Modal Body -->	
+<div class="row">            
+
+           
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form class="form-horizontal">
+              <div class="box-body">
+                
+				<div class="input-group">
+                	<span class="input-group-addon"><i class="fa fa-user"></i></span>
+                	<input type="text" class="form-control" placeholder="Name">
+              	</div>
+				<br>
+				<div class="input-group">
+                	<span class="input-group-addon"><i class="fa fa-envelope"></i></span>
+                	<input type="email" class="form-control" placeholder="Email">
+              	</div>
+                <br>
+				<div class="input-group">
+                	<span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                	<input type="text" class="form-control" placeholder="Phone Number">
+              	</div>
+                <br>
+				<div class="input-group">
+                	<span class="input-group-addon"><i class="fa fa-paperclip"></i></span>
+                	<input type="text" class="form-control" placeholder="Subject">
+              	</div>
+              	<br>
+				<div class="input-group">
+                	<span class="input-group-addon"><i class="fa fa-file-text"></i></span>
+					<textarea class="form-control" rows="3" placeholder="Message ..."></textarea>
+              	</div>
+   
+              </div>
+              <!-- /.box-body -->
+            </form>
+           
+</div>	<!-- Close Row -->
+</div>	<!-- Close model body Section -->
+<div class="modal-footer">
+	      <button type="button" class="btn btn-default" data-dismiss="modal">Close and Clear</button>
+	      <input class="btn btn-success" type="submit" value="Submit">   
+</div>  
+	    
+	    
+	    
+	    
+	    </div>
+	  </div>
+	</div>
+
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <!-- DIRECT CHAT PRIMARY -->
+          <div class="box box-primary direct-chat direct-chat-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title"><i class="fa fa-comments-o"></i> Direct Chat</h3>
+
+              <div class="box-tools pull-right">
+                <span data-toggle="tooltip" title="" class="badge bg-light-blue" data-original-title="3 New Messages">3</span>
+                <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="" data-widget="chat-pane-toggle" data-original-title="Contacts"> <i class="fa fa-users"></i></button>
+                <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+                
+              </div>
+              
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <!-- Conversations are loaded here -->
+              <div class="direct-chat-messages">
+                <!-- Message. Default to the left -->
+                <div class="direct-chat-msg">
+                  <div class="direct-chat-info clearfix">
+                    <span class="direct-chat-name pull-left">Alexander Pierce</span>
+                    <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span>
+                  </div>
+                  <!-- /.direct-chat-info -->
+                  <img class="direct-chat-img" src="/adminTemplateImg/avatar3.png" alt="Message User Image"><!-- /.direct-chat-img -->
+                  <div class="direct-chat-text">
+                    Is this template really for free? That's unbelievable!
+                  </div>
+                  <!-- /.direct-chat-text -->
+                </div>
+                <!-- /.direct-chat-msg -->
+
+                <!-- Message to the right -->
+                <div class="direct-chat-msg right">
+                  <div class="direct-chat-info clearfix">
+                    <span class="direct-chat-name pull-right">Sarah Bullock</span>
+                    <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span>
+                  </div>
+                  <!-- /.direct-chat-info -->
+                  <img class="direct-chat-img" src="/adminTemplateImg/avatar3.png" alt="Message User Image"><!-- /.direct-chat-img -->
+                  <div class="direct-chat-text">
+                    You better believe it!
+                  </div>
+                  <!-- /.direct-chat-text -->
+                </div>
+                <!-- /.direct-chat-msg -->
+              </div>
+              <!--/.direct-chat-messages-->
+
+              <!-- Contacts are loaded here -->
+              <div class="direct-chat-contacts">
+                <ul class="contacts-list">
+                  <li>
+                    <a href="#">
+                      <img class="contacts-list-img" src="/adminTemplateImg/avatar3.png" alt="User Image">
+
+                      <div class="contacts-list-info">
+                            <span class="contacts-list-name">
+                              Count Dracula
+                              <small class="contacts-list-date pull-right">2/28/2015</small>
+                            </span>
+                        <span class="contacts-list-msg">How have you been? I was...</span>
+                      </div>
+                      <!-- /.contacts-list-info -->
+                    </a>
+                  </li>
+                  <!-- End Contact Item -->
+                </ul>
+                <!-- /.contatcts-list -->
+              </div>
+              <!-- /.direct-chat-pane -->
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+              <form action="#" method="post">
+                <div class="input-group">
+                  <input type="text" name="message" placeholder="Type Message ..." class="form-control">
+                      <span class="input-group-btn">
+                        <button type="submit" class="btn btn-primary btn-flat">Send</button>
+                      </span>
+                </div>
+              </form>
+            </div>
+            <!-- /.box-footer-->
+          </div>
+          <!--/.direct-chat -->
+        </div>

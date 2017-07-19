@@ -1,14 +1,134 @@
-2017-07-18 21:32:42 DEBUG logging:29 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
-2017-07-18 21:32:42 INFO  Version:27 - HV000001: Hibernate Validator 5.0.2.Final
-2017-07-18 21:32:42 DEBUG DefaultTraversableResolver:74 - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
-2017-07-18 21:32:42 DEBUG ConfigurationImpl:120 - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
-2017-07-18 21:32:42 DEBUG ConfigurationImpl:140 - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
-2017-07-18 21:32:42 DEBUG ConfigurationImpl:154 - Setting custom ParameterNameProvider of type com.sun.proxy.$Proxy121
-2017-07-18 21:32:42 DEBUG ValidationXmlParser:88 - Trying to load META-INF/validation.xml for XML based Validator configuration.
-2017-07-18 21:32:42 DEBUG ValidationXmlParser:95 - No META-INF/validation.xml found. Using annotation based configuration only.
-2017-07-18 21:32:42 DEBUG DefaultTraversableResolver:74 - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
-2017-07-18 21:32:42 DEBUG ConfigurationImpl:120 - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
-2017-07-18 21:32:42 DEBUG ConfigurationImpl:140 - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
-2017-07-18 21:32:42 DEBUG ConfigurationImpl:154 - Setting custom ParameterNameProvider of type com.sun.proxy.$Proxy121
-2017-07-18 21:32:42 DEBUG ValidationXmlParser:88 - Trying to load META-INF/validation.xml for XML based Validator configuration.
-2017-07-18 21:32:42 DEBUG ValidationXmlParser:95 - No META-INF/validation.xml found. Using annotation based configuration only.
+2017-07-18 22:03:36 DEBUG logging:29 - Logging Provider: org.jboss.logging.Log4jLoggerProvider
+2017-07-18 22:03:36 INFO  Version:27 - HV000001: Hibernate Validator 5.0.2.Final
+2017-07-18 22:03:36 DEBUG DefaultTraversableResolver:74 - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2017-07-18 22:03:36 DEBUG ConfigurationImpl:120 - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2017-07-18 22:03:36 DEBUG ConfigurationImpl:140 - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2017-07-18 22:03:36 DEBUG ConfigurationImpl:154 - Setting custom ParameterNameProvider of type com.sun.proxy.$Proxy1081
+2017-07-18 22:03:36 DEBUG ValidationXmlParser:88 - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2017-07-18 22:03:36 DEBUG ValidationXmlParser:95 - No META-INF/validation.xml found. Using annotation based configuration only.
+2017-07-18 22:03:36 DEBUG DefaultTraversableResolver:74 - Cannot find javax.persistence.Persistence on classpath. Assuming non JPA 2 environment. All properties will per default be traversable.
+2017-07-18 22:03:36 DEBUG ConfigurationImpl:120 - Setting custom MessageInterpolator of type org.springframework.validation.beanvalidation.LocaleContextMessageInterpolator
+2017-07-18 22:03:36 DEBUG ConfigurationImpl:140 - Setting custom ConstraintValidatorFactory of type org.springframework.validation.beanvalidation.SpringConstraintValidatorFactory
+2017-07-18 22:03:36 DEBUG ConfigurationImpl:154 - Setting custom ParameterNameProvider of type com.sun.proxy.$Proxy1081
+2017-07-18 22:03:36 DEBUG ValidationXmlParser:88 - Trying to load META-INF/validation.xml for XML based Validator configuration.
+2017-07-18 22:03:36 DEBUG ValidationXmlParser:95 - No META-INF/validation.xml found. Using annotation based configuration only.
+2017-07-18 22:34:25 INFO  TodoDAOService:104 - INSIDE getListOfTodos METHOD
+2017-07-18 22:34:25 INFO  DBHelper:29 - Setting up the Class Forname:com.mysql.jdbc.Driver
+2017-07-18 22:34:25 INFO  DBHelper:37 - Connected database: EDW successfully
+
+2017-07-18 22:34:25 INFO  TodoDAOService:117 - Executing the following Query: SELECT * FROM todos_list WHERE username=?
+2017-07-18 22:34:25 INFO  TodoDAOService:142 - 
+Current TODO Info:
+---------------------
+
+2017-07-18 22:34:25 INFO  TodoDAOService:143 - 12 - amine89 - amine dehmani - 06/24/2017 - true - 
+2017-07-18 22:34:25 INFO  TodoDAOService:142 - 
+Current TODO Info:
+---------------------
+
+2017-07-18 22:34:25 INFO  TodoDAOService:143 - 13 - amine89 - amine dehmani - 06/24/2017 - false - 
+2017-07-18 22:34:25 INFO  TodoDAOService:142 - 
+Current TODO Info:
+---------------------
+
+2017-07-18 22:34:25 INFO  TodoDAOService:143 - 16 - amine89 - aminos dehmanios - 07/02/2017 - false - 
+2017-07-18 22:34:25 INFO  TodoDAOService:142 - 
+Current TODO Info:
+---------------------
+
+2017-07-18 22:34:25 INFO  TodoDAOService:143 - 17 - amine89 - adding new desc here - 07/26/2017 - false - 
+2017-07-18 22:34:28 INFO  TodoDAOService:104 - INSIDE getListOfTodos METHOD
+2017-07-18 22:34:28 INFO  DBHelper:29 - Setting up the Class Forname:com.mysql.jdbc.Driver
+2017-07-18 22:34:28 INFO  DBHelper:37 - Connected database: EDW successfully
+
+2017-07-18 22:34:28 INFO  TodoDAOService:117 - Executing the following Query: SELECT * FROM todos_list WHERE username=?
+2017-07-18 22:34:28 INFO  TodoDAOService:142 - 
+Current TODO Info:
+---------------------
+
+2017-07-18 22:34:28 INFO  TodoDAOService:143 - 12 - amine89 - amine dehmani - 06/24/2017 - true - 
+2017-07-18 22:34:28 INFO  TodoDAOService:142 - 
+Current TODO Info:
+---------------------
+
+2017-07-18 22:34:28 INFO  TodoDAOService:143 - 13 - amine89 - amine dehmani - 06/24/2017 - false - 
+2017-07-18 22:34:28 INFO  TodoDAOService:142 - 
+Current TODO Info:
+---------------------
+
+2017-07-18 22:34:28 INFO  TodoDAOService:143 - 16 - amine89 - aminos dehmanios - 07/02/2017 - false - 
+2017-07-18 22:34:28 INFO  TodoDAOService:142 - 
+Current TODO Info:
+---------------------
+
+2017-07-18 22:34:28 INFO  TodoDAOService:143 - 17 - amine89 - adding new desc here - 07/26/2017 - false - 
+2017-07-18 22:34:30 INFO  TodoDAOService:35 - INSIDE getATodoByID METHOD
+2017-07-18 22:34:30 INFO  DBHelper:29 - Setting up the Class Forname:com.mysql.jdbc.Driver
+2017-07-18 22:34:30 INFO  DBHelper:37 - Connected database: EDW successfully
+
+2017-07-18 22:34:30 INFO  TodoDAOService:49 - Executing the following Query: SELECT * FROM todos_list WHERE id = ? and username = ? 
+2017-07-18 22:34:30 INFO  TodoDAOService:71 - 
+Current TODO Info:
+---------------------
+
+2017-07-18 22:34:30 INFO  TodoDAOService:72 - 12 - amine89 - amine dehmani - 06/24/2017 - true - 
+2017-07-18 22:34:34 INFO  TodoDAOService:231 - INSIDE UPDATE METHOD
+2017-07-18 22:34:34 INFO  TodoDAOService:232 - amine dehmani 123
+2017-07-18 22:34:34 INFO  TodoDAOService:233 - 07/18/2017
+2017-07-18 22:34:34 INFO  TodoDAOService:234 - 12
+2017-07-18 22:34:34 INFO  TodoDAOService:235 - amine89
+2017-07-18 22:34:34 INFO  DBHelper:29 - Setting up the Class Forname:com.mysql.jdbc.Driver
+2017-07-18 22:34:34 INFO  DBHelper:37 - Connected database: EDW successfully
+
+2017-07-18 22:34:34 INFO  TodoDAOService:250 - Executing the following Query: UPDATE todos_list SET description = ? , targetDate = ? WHERE id = ? and username = ? 
+2017-07-18 22:34:34 INFO  TodoDAOService:252 - Record is Updated!
+2017-07-18 22:34:34 INFO  TodoDAOService:104 - INSIDE getListOfTodos METHOD
+2017-07-18 22:34:34 INFO  DBHelper:29 - Setting up the Class Forname:com.mysql.jdbc.Driver
+2017-07-18 22:34:34 INFO  DBHelper:37 - Connected database: EDW successfully
+
+2017-07-18 22:34:34 INFO  TodoDAOService:117 - Executing the following Query: SELECT * FROM todos_list WHERE username=?
+2017-07-18 22:34:34 INFO  TodoDAOService:142 - 
+Current TODO Info:
+---------------------
+
+2017-07-18 22:34:34 INFO  TodoDAOService:143 - 12 - amine89 - amine dehmani 123 - 07/18/2017 - true - 
+2017-07-18 22:34:34 INFO  TodoDAOService:142 - 
+Current TODO Info:
+---------------------
+
+2017-07-18 22:34:34 INFO  TodoDAOService:143 - 13 - amine89 - amine dehmani - 06/24/2017 - false - 
+2017-07-18 22:34:34 INFO  TodoDAOService:142 - 
+Current TODO Info:
+---------------------
+
+2017-07-18 22:34:34 INFO  TodoDAOService:143 - 16 - amine89 - aminos dehmanios - 07/02/2017 - false - 
+2017-07-18 22:34:34 INFO  TodoDAOService:142 - 
+Current TODO Info:
+---------------------
+
+2017-07-18 22:34:34 INFO  TodoDAOService:143 - 17 - amine89 - adding new desc here - 07/26/2017 - false - 
+2017-07-18 22:34:41 INFO  TodoDAOService:104 - INSIDE getListOfTodos METHOD
+2017-07-18 22:34:41 INFO  DBHelper:29 - Setting up the Class Forname:com.mysql.jdbc.Driver
+2017-07-18 22:34:41 INFO  DBHelper:37 - Connected database: EDW successfully
+
+2017-07-18 22:34:41 INFO  TodoDAOService:117 - Executing the following Query: SELECT * FROM todos_list WHERE username=?
+2017-07-18 22:34:41 INFO  TodoDAOService:142 - 
+Current TODO Info:
+---------------------
+
+2017-07-18 22:34:41 INFO  TodoDAOService:143 - 12 - amine89 - amine dehmani 123 - 07/18/2017 - true - 
+2017-07-18 22:34:41 INFO  TodoDAOService:142 - 
+Current TODO Info:
+---------------------
+
+2017-07-18 22:34:41 INFO  TodoDAOService:143 - 13 - amine89 - amine dehmani - 06/24/2017 - false - 
+2017-07-18 22:34:41 INFO  TodoDAOService:142 - 
+Current TODO Info:
+---------------------
+
+2017-07-18 22:34:41 INFO  TodoDAOService:143 - 16 - amine89 - aminos dehmanios - 07/02/2017 - false - 
+2017-07-18 22:34:41 INFO  TodoDAOService:142 - 
+Current TODO Info:
+---------------------
+
+2017-07-18 22:34:41 INFO  TodoDAOService:143 - 17 - amine89 - adding new desc here - 07/26/2017 - false - 

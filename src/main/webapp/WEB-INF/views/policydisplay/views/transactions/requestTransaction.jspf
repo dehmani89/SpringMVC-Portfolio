@@ -78,33 +78,125 @@
     <!-- /.box-header -->
     <div class="box-body table-responsive no-padding">
       <table class="table table-hover">
-        <tbody>
+       
+        <thead class="thead-inverse">
         <tr>
           <th>Fund family</th>
           <th>Portfolio Name</th>
           <th>Unit Value</th>
           <th>Reablance Percent</th>
         </tr>
+        </thead>
+        <tbody>
         <tr>
           <td>AB Variable Products Series Fund, Inc.</td>
           <td>AB VPS Dynamic Asset Allocation Portfolio</td>
           <td class="text-center">12.226168</td>
           <td class="text-center">
-			 
-
-  
-          <div class="range range-success">
-            <input type="range" name="range" min="1" max="100" value="50" onchange="rangeSuccess.value=value">
-            <output id="rangeSuccess">50</output>
-          </div>
-
-
-
-
-
-		  </td>
+          	<div class="input-group">
+                <input type="text" class="form-control" maxlength="3">
+                <span class="input-group-addon"><strong>%</strong></span>
+            </div></td>
         </tr>
-        
+        <tr>
+          <td>AB Variable Products Series Fund, Inc.</td>
+          <td>AB VPS Dynamic Asset Allocation Portfolio</td>
+          <td class="text-center">12.226168</td>
+          <td class="text-center">
+          	<div class="input-group">
+                <input type="text" class="form-control" maxlength="3">
+                <span class="input-group-addon"><strong>%</strong></span>
+            </div></td>
+        </tr>
+        <tr>
+          <td>AB Variable Products Series Fund, Inc.</td>
+          <td>AB VPS Dynamic Asset Allocation Portfolio</td>
+          <td class="text-center">12.226168</td>
+          <td class="text-center">
+          	<div class="input-group">
+                <input type="text" class="form-control" maxlength="3">
+                <span class="input-group-addon"><strong>%</strong></span>
+            </div></td>
+        </tr>
+        <tr>
+          <td>AB Variable Products Series Fund, Inc.</td>
+          <td>AB VPS Dynamic Asset Allocation Portfolio</td>
+          <td class="text-center">12.226168</td>
+          <td class="text-center">
+          	<div class="input-group">
+                <input type="text" class="form-control" maxlength="3">
+                <span class="input-group-addon"><strong>%</strong></span>
+            </div></td>
+        </tr>
+        <tr>
+          <td>AB Variable Products Series Fund, Inc.</td>
+          <td>AB VPS Dynamic Asset Allocation Portfolio</td>
+          <td class="text-center">12.226168</td>
+          <td class="text-center">
+          	<div class="input-group">
+                <input type="text" class="form-control" maxlength="3">
+                <span class="input-group-addon"><strong>%</strong></span>
+            </div></td>
+        </tr>
+        <tr>
+          <td>AB Variable Products Series Fund, Inc.</td>
+          <td>AB VPS Dynamic Asset Allocation Portfolio</td>
+          <td class="text-center">12.226168</td>
+          <td class="text-center">
+          	<div class="input-group">
+                <input type="text" class="form-control" maxlength="3">
+                <span class="input-group-addon"><strong>%</strong></span>
+            </div></td>
+        </tr>
+        <tr>
+          <td>AB Variable Products Series Fund, Inc.</td>
+          <td>AB VPS Dynamic Asset Allocation Portfolio</td>
+          <td class="text-center">12.226168</td>
+          <td class="text-center">
+          	<div class="input-group">
+                <input type="text" class="form-control" maxlength="3">
+                <span class="input-group-addon"><strong>%</strong></span>
+            </div></td>
+        </tr>
+        <tr>
+          <td>AB Variable Products Series Fund, Inc.</td>
+          <td>AB VPS Dynamic Asset Allocation Portfolio</td>
+          <td class="text-center">12.226168</td>
+          <td class="text-center">
+          	<div class="input-group">
+                <input type="text" class="form-control" maxlength="3">
+                <span class="input-group-addon"><strong>%</strong></span>
+            </div></td>
+        </tr>
+        <tr>
+          <td>AB Variable Products Series Fund, Inc.</td>
+          <td>AB VPS Dynamic Asset Allocation Portfolio</td>
+          <td class="text-center">12.226168</td>
+          <td class="text-center">
+          	<div class="input-group">
+                <input type="text" class="form-control" maxlength="3">
+                <span class="input-group-addon"><strong>%</strong></span>
+            </div></td>
+        </tr>
+        <tr>
+          <td>AB Variable Products Series Fund, Inc.</td>
+          <td>AB VPS Dynamic Asset Allocation Portfolio</td>
+          <td class="text-center">12.226168</td>
+          <td class="text-center">
+          	<div class="input-group">
+                <input type="text" class="form-control" maxlength="3">
+                <span class="input-group-addon"><strong>%</strong></span>
+            </div></td>
+        </tr>
+        <tr class="success">
+          <td colspan="3" class="align-right"><strong>Total Percent Transfer.</strong></td>
+          	<td>
+			<div class="input-group">
+                <input type="text" class="form-control" maxlength="3">
+                <span class="input-group-addon"><strong>%</strong></span>
+            </div></td>
+			</td>
+        </tr>
        </tbody></table>
     </div>
     <!-- /.box-body -->

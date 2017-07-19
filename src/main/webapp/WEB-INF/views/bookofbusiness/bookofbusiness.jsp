@@ -42,6 +42,42 @@
           </div>
           <!-- /.box -->
         </div>
+        
+        
+        
+        <!-- Search for Book of business -->
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+        <div class="box box-info">
+            <div class="box-header with-border">
+              <h3 class="box-title">Search for a Book of business</h3>
+            </div>
+            <!-- /.box-header -->
+            <!-- form start -->
+            <form class="form-horizontal">
+              <div class="box-body">
+                <div class="form-group">
+                  <label for="inputagentNumber" class="col-sm-3 control-label">Agent Number</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="inputagentNumber" placeholder="Agent Number">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputagencyNumber" class="col-sm-3 control-label">Agency Number</label>
+                  <div class="col-sm-9">
+                    <input type="text" class="form-control" id="inputagencyNumber" placeholder="Agency Number">
+                  </div>
+                </div>
+              </div>
+              <!-- /.box-body -->
+              <div class="box-footer">
+                <button type="submit" class="btn btn-info pull-right">Search</button>
+              </div>
+              <!-- /.box-footer -->
+            </form>
+          </div>
+          </div>
+        
+        
 </div>        
         
     </section>        

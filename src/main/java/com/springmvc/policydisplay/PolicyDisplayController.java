@@ -37,7 +37,7 @@ public class PolicyDisplayController {
 	public String showProfileInformation(ModelMap model) {
 		System.out.println("inside GET /policy-display");
 		// the returned page name
-		return appView + "/policyview";
+		return appView + "/policyview"; 
 	}
 
 	/**

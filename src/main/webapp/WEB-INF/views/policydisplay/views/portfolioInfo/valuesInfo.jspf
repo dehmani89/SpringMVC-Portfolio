@@ -10,19 +10,19 @@
 			
 			<div class="box-tools">
                 <div class="input-group input-group-md" style="width: 150px;">
-               
-				  
 				<div class="input-group date">
                   <div class="input-group-addon">
                     <i class="fa fa-calendar"></i>
                   </div>
-                  <input type="text" class="form-control pull-right" id="datepicker">
+                  <input type="text" class="form-control pull-right" id="valuesInfoDatepicker">
                 </div>
 				<br>
 				<button class="applyBtn btn btn-sm btn-success" type="button">Apply</button>				
                 </div>
               </div>
 			  <br>
+			  
+			
 			  <div class="box-body table-responsive no-padding">
               <table class="table table-striped">
 				<caption>Portfolio Values as of 06/22/2017</caption>
@@ -40,21 +40,21 @@
                   <td>Northern Lights Variable Trust</td>
                   <td>TOPS Managed Risk Moderate Growth ETF </td>
                   <td>1</td>
-                  <td>$48,069.81	</td>
-                  <td>50.00%	</td>
+                  <td>$48,069.81</td>
+                  <td><span class="badge bg-orange">50.00%</span></td>
                   <td>4039.2316</td>
                   <td>11.900731</td>
-				  <td>49.99%</td>
+				  <td><span class="badge bg-green">49.99%</span></td>
                 </tr>
                 <tr>
                   <td>Northern Lights Variable Trust</td>
                   <td>TOPS Managed Risk Growth ETF Portfolio 	</td>
                   <td>2</td>
                   <td>$24,058.86	</td>
-                  <td>25.00%	</td>
+                  <td><span class="badge bg-orange">25.00%</span></td>
                   <td>2073.4906	</td>
                   <td>11.603073	</td>
-                  <td>25.02%</td>
+                  <td><span class="badge bg-green">25.02%</span></td>
                 </tr>		
 				
 				<tr>
@@ -62,24 +62,30 @@
                   <td>Balanced Portfolio 	</td>
                   <td>2</td>
                   <td>$24,039.68	</td>
-                  <td>25.00%	</td>
+                  <td><span class="badge bg-orange">25.00%</span></td>
                   <td>1233.4085	</td>
                   <td>19.490446	</td>
-                  <td>25.00%</td>
-                </tr>
-				
-				<tr>
-                  <td>Rebalance</td>
-                  <td>Rebalance</td>
-                  <td>Rebalance</td>
-                  <td>Rebalance</td>
-                  <td>Rebalance</td>
-                  <td>Rebalance</td>
-                  <td>Rebalance</td>
-                  <td>Rebalance</td>
+                  <td><span class="badge bg-green">25.00%</span></td>
                 </tr>
 				</table>
 				</div>
             </div>
 			  </div>
 			  </div>
+
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<p><span class="badge bg-orange">%</span> Denote a <strong>Future</strong> Allocation Percent Scheduled</p>
+<p><span class="badge bg-green">%</span> Denote a <strong>Current</strong> Allocation Percent in Effect</p>
+</div>			  
+			  
+			  
+<script type="text/javascript">
+//Date picker
+$('#datepicker').datepicker({
+  autoclose: true,
+  orientation: 'bottom auto',
+  todayHighlight: true,
+});
+$("#datepicker").datepicker('setDate', new Date());
+</script>
+			  

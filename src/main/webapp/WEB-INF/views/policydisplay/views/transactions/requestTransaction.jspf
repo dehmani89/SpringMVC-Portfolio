@@ -1,4 +1,60 @@
 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+			<div class="box box-success">
+            <div class="box-header with-border">
+              <h3 class="box-title">Your Current Elections</h3>			  
+			  <div class="box-tools pull-right">
+				<button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+			  </div>
+            </div>
+            <div class="box-body">
+			  <!-- Your current portfolio elections -->
+			  <div class="box">
+			    <!-- /.box-header -->
+			    <div class="box-body table-responsive no-padding">
+			      <table class="table table-hover">
+			        <tbody>
+			        <tr>
+			          <th>Fund family</th>
+			          <th>Portfolio Name</th>
+			          <th class="text-center">Invested Value</th>
+			          <th class="text-center">Invested Percent</th>
+			        </tr>
+			        <tr>
+			          <td>Ohio National Fund, Inc.</td>
+			          <td><a href="#" data-toggle="modal" data-target="#bs-pdf-viewer1"><span class="fa fa-line-chart"></span> S&P 500® Index Portfolio</a></td>
+			          <td class="text-center">$15,000.00</td>
+			          <td class="text-center"><span class="badge bg-green">25%</span></td>
+			        </tr>
+			        <tr>
+			          <td>AB Variable Products Series Fund, Inc.</td>
+			          <td><a href="#" data-toggle="modal" data-target="#bs-pdf-viewer2"><span class="fa fa-line-chart"></span> AB VPS Dynamic Asset Allocation Portfolio</a></td>
+			          <td class="text-center">$15,000.00</td>
+			          <td class="text-center"><span class="badge bg-green">25%</span></td>
+			        </tr>
+			        <tr>
+			          <td>Fidelity® Variable Insurance Products</td>
+			          <td><a href="#" data-toggle="modal" data-target="#bs-pdf-viewer3"><span class="fa fa-line-chart"></span> Fidelity® VIP Mid Cap Portfolio</a></td>
+			          <td class="text-center">$15,000.00</td>
+			          <td class="text-center"><span class="badge bg-green">25%</span></td>
+			        </tr>
+			        <tr>
+			          <td>Janus Aspen Series</td>
+			          <td><a href="#" data-toggle="modal" data-target="#bs-pdf-viewer4"><span class="fa fa-line-chart"></span> INTECH U.S. Low Volatility Portfolio</a></td>
+			          <td class="text-center">$15,000.00</td>
+			          <td class="text-center"><span class="badge bg-green">25%</span></td>
+			        </tr>
+			       </tbody></table>
+			    </div>
+			    <!-- /.box-body -->
+			  </div><!-- /.box -->
+			  </div>
+  		</div>
+ </div>
+ 
+ 
+ 
+ <!-- Transaction Event -->
+ <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 			<div class="box box-warning">
             <div class="box-header with-border">
               <h3 class="box-title">Rebalance Your Portfolio</h3>			  
@@ -8,51 +64,7 @@
             </div>
             <div class="box-body">
 
-  <!-- Your current portfolio elections -->
-  <div class="box">
-    <div class="box-header">
-      <h3 class="box-title">Your Current Elections</h3>
-    </div>
-    <!-- /.box-header -->
-    <div class="box-body table-responsive no-padding">
-      <table class="table table-hover">
-        <tbody>
-        <tr>
-          <th>Fund family</th>
-          <th>Portfolio Name</th>
-          <th>Invested Value</th>
-          <th>Invested Percent</th>
-        </tr>
-        <tr>
-          <td>AB Variable Products Series Fund, Inc.</td>
-          <td>AB VPS Dynamic Asset Allocation Portfolio</td>
-          <td class="text-center">$15,000.00</td>
-          <td class="text-center"><span class="badge bg-green">55%</span></td>
-        </tr>
-        <tr>
-          <td>AB Variable Products Series Fund, Inc.</td>
-          <td>AB VPS Dynamic Asset Allocation Portfolio</td>
-          <td class="text-center">$15,000.00</td>
-          <td class="text-center"><span class="badge bg-green">20%</span></td>
-        </tr>
-        <tr>
-          <td>AB Variable Products Series Fund, Inc.</td>
-          <td>AB VPS Dynamic Asset Allocation Portfolio</td>
-          <td class="text-center">$15,000.00</td>
-          <td class="text-center"><span class="badge bg-green">15%</span></td>
-        </tr>
-        <tr>
-          <td>AB Variable Products Series Fund, Inc.</td>
-          <td>AB VPS Dynamic Asset Allocation Portfolio</td>
-          <td class="text-center">$15,000.00</td>
-          <td class="text-center"><span class="badge bg-green">10%</span></td>
-        </tr>
-       </tbody></table>
-    </div>
-    <!-- /.box-body -->
-  </div><!-- /.box -->
- 
- 			
+  <!-- Your current portfolio elections --> 			
 <div class="stepwizard">
     <div class="stepwizard-row setup-panel">
       <div class="stepwizard-step">
@@ -71,11 +83,254 @@
   </div>
  
   <!-- Your Future portfolio elections -->
-  <div class="box">
+  <form role="form" action="" method="post">
+    <div class="row setup-content" id="step-1">
+      <div class="col-xs-10 col-md-offset-1">
+        <div class="col-xs-12">
+                  
+                  
+                  
+           
+              
+                      
+            <div class="box-body">
+			  <!-- Your current portfolio elections -->
+			   <div class="alert alert-info alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <h4><i class="icon fa fa-warning"></i> Alert!</h4>
+                All of your <strong>current elections</strong> will be placed into one pool. That pool balance will be devised into the "rebalance" percentages according to your new elections. The total percentages of the new elections must equal 100%. 
+              </div>
+			  <div class="box">
+			    <!-- /.box-header -->
+			    <div class="box-body table-responsive no-padding">
+			      <table class="table table-hover">
+			        <tbody>
+			        <tr>
+			          <th>Fund family</th>
+			          <th>Portfolio Name</th>
+			          <th class="text-center">Reablance Percent</th>
+			        </tr>
+			        <tr>
+			          <td>Ohio National Fund, Inc.</td>
+			          <td><a href="#" data-toggle="modal" data-target="#bs-pdf-viewer1"><span class="fa fa-line-chart"></span> S&P 500® Index Portfolio</a></td>
+			          <td class="text-center">
+			          	<div class="input-group">
+			                <input type="text" class="form-control" maxlength="3"><span class="input-group-addon"><strong>%</strong></span>
+			            </div>
+			          </td>
+			        </tr>
+			        <tr>
+			          <td>AB Variable Products Series Fund, Inc.</td>
+			          <td><a href="#" data-toggle="modal" data-target="#bs-pdf-viewer2"><span class="fa fa-line-chart"></span> AB VPS Dynamic Asset Allocation Portfolio</a></td>
+			          			          <td class="text-center">
+			          	<div class="input-group">
+			                <input type="text" class="form-control" maxlength="3"><span class="input-group-addon"><strong>%</strong></span>
+			            </div>
+			          </td>
+			        </tr>
+			        <tr>
+			          <td>Fidelity® Variable Insurance Products</td>
+			          <td><a href="#" data-toggle="modal" data-target="#bs-pdf-viewer3"><span class="fa fa-line-chart"></span> Fidelity® VIP Mid Cap Portfolio</a></td>
+			          <td class="text-center">
+			          	<div class="input-group">
+			                <input type="text" class="form-control" maxlength="3"><span class="input-group-addon"><strong>%</strong></span>
+			            </div>
+			          </td>
+			        </tr>
+			        <tr>
+			          <td>Janus Aspen Series</td>
+			          <td><a href="#" data-toggle="modal" data-target="#bs-pdf-viewer4"><span class="fa fa-line-chart"></span> INTECH U.S. Low Volatility Portfolio</a></td>
+			          <td class="text-center">
+			          	<div class="input-group">
+			                <input type="text" class="form-control" maxlength="3"><span class="input-group-addon"><strong>%</strong></span>
+			            </div>
+			          </td>
+			        </tr>
+			        			        <tr>
+			          <td>The Royce Fund</td>
+			          <td><a href="#" data-toggle="modal" data-target="#bs-pdf-viewer4"><span class="fa fa-line-chart"></span> Royce Opportunity Fund</a></td>
+			          <td class="text-center">
+			          	<div class="input-group">
+			                <input type="text" class="form-control" maxlength="3"><span class="input-group-addon"><strong>%</strong></span>
+			            </div>
+			          </td>
+			        </tr>
+			        			        <tr>
+			          <td>Franklin Templeton Variable Insurance Products</td>
+			          <td><a href="#" data-toggle="modal" data-target="#bs-pdf-viewer4"><span class="fa fa-line-chart"></span> Franklin Flex Cap Growth VIP Fund</a></td>
+			          <td class="text-center">
+			          	<div class="input-group">
+			                <input type="text" class="form-control" maxlength="3"><span class="input-group-addon"><strong>%</strong></span>
+			            </div>
+			          </td>
+			        </tr>
+			        			        <tr>
+			          <td>Goldman Sachs Trust</td>
+			          <td><a href="#" data-toggle="modal" data-target="#bs-pdf-viewer4"><span class="fa fa-line-chart"></span> Goldman Sachs Small Cap Value Fund</a></td>
+			          <td class="text-center">
+			          	<div class="input-group">
+			                <input type="text" class="form-control" maxlength="3"><span class="input-group-addon"><strong>%</strong></span>
+			            </div>
+			          </td>
+			        </tr>
+			        			        <tr>
+			          <td>Invesco Variable Insurance Funds</td>
+			          <td><a href="#" data-toggle="modal" data-target="#bs-pdf-viewer4"><span class="fa fa-line-chart"></span> Invesco V.I. International Growth Fund</a></td>
+			          <td class="text-center">
+			          	<div class="input-group">
+			                <input type="text" class="form-control" maxlength="3"><span class="input-group-addon"><strong>%</strong></span>
+			            </div>
+			          </td>
+			        </tr>
+			        			        <tr>
+			          <td>JPMorgan Insurance Trust</td>
+			          <td><a href="#" data-toggle="modal" data-target="#bs-pdf-viewer4"><span class="fa fa-line-chart"></span> JPMorgan Insurance Trust Small Cap Core Portfolio</a></td>
+			          <td class="text-center">
+			          	<div class="input-group">
+			                <input type="text" class="form-control" maxlength="3"><span class="input-group-addon"><strong>%</strong></span>
+			            </div>
+			          </td>
+			        </tr>
+			        			        <tr>
+			          <td>Morningstar ETF Allocation Series</td>
+			          <td><a href="#" data-toggle="modal" data-target="#bs-pdf-viewer4"><span class="fa fa-line-chart"></span> Morningstar Conservative ETF Asset Allocation</a></td>
+			          <td class="text-center">
+			          	<div class="input-group">
+			                <input type="text" class="form-control" maxlength="3"><span class="input-group-addon"><strong>%</strong></span>
+			            </div>
+			          </td>
+			        </tr>
+			       </tbody></table>
+			    </div>
+			    <!-- /.box-body -->
+			  </div><!-- /.box -->
+			  </div>
+          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Review</button>
+        </div>
+      </div>
+    </div>
+    <div class="row setup-content" id="step-2">
+      <div class="col-xs-10 col-md-offset-1">
+        <div class="col-xs-12">
+                  
+                  
+                  
+           
+              
+                      
+            <div class="box-body">
+			  <!-- Your current portfolio elections -->
+			   <div class="alert alert-warning alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <h4><i class="icon fa fa-warning"></i> Alert!</h4>
+                You have elected to make transfers into the following portfolios at the percentages listed.
+				Check carefully the portfolios you have chosen and the percentages you wish to transfer.
+				You must click the <strong>Finalize </strong> button below to complete your transaction.
+</div>
+			  <div class="box">
+			    <!-- /.box-header -->
+			    <div class="box-body table-responsive no-padding">
+			      <table class="table table-hover">
+			        <tbody>
+			        <tr>
+			          <th>Fund family</th>
+			          <th>Portfolio Name</th>
+			          <th class="text-center">Reablance Percent</th>
+			        </tr>
+			        
+			        			        <tr>
+			          <td>The Royce Fund</td>
+			          <td><a href="#" data-toggle="modal" data-target="#bs-pdf-viewer4"><span class="fa fa-line-chart"></span> Royce Opportunity Fund</a></td>
+			          <td class="text-center"><span class="badge bg-orange">50%</span></td>
+
+			        </tr>
+			        			        <tr>
+			          <td>Goldman Sachs Trust</td>
+			          <td><a href="#" data-toggle="modal" data-target="#bs-pdf-viewer4"><span class="fa fa-line-chart"></span> Goldman Sachs Small Cap Value Fund</a></td>
+			          <td class="text-center"><span class="badge bg-orange">25%</span></td>
+
+			        </tr>
+			      
+			        			        <tr>
+			          <td>JPMorgan Insurance Trust</td>
+			          <td><a href="#" data-toggle="modal" data-target="#bs-pdf-viewer4"><span class="fa fa-line-chart"></span> JPMorgan Insurance Trust Small Cap Core Portfolio</a></td>
+			          <td class="text-center"><span class="badge bg-orange">25%</span></td>
+			        </tr>
+			       
+			       </tbody></table>
+			    </div>
+			    <!-- /.box-body -->
+			  </div><!-- /.box -->
+			  </div>
+          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Finalize</button>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    <div class="row setup-content" id="step-3">
+      <div class="col-xs-10 col-md-offset-1">
+        <div class="col-xs-12">
+            <div class="box-body">
+			  <!-- Your current portfolio elections -->
+			   <div class="alert alert-success alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <h4><i class="icon fa fa-warning"></i> Alert!</h4>
+                Congratulations, you have successfully rebalanced your portfolio. Your transaction was completed on Monday August 14th, 2017 at 10:30 am.
+Please review your elections below for accuracy. If there are any issues with your transfer, please contact our customer service at 1 (800) 555 4553.
+Thank you, 
+
+</div>
+			  <div class="box">
+			    <!-- /.box-header -->
+			    <div class="box-body table-responsive no-padding">
+			      <table class="table table-hover">
+			        <tbody>
+			        <tr>
+			          <th>Fund family</th>
+			          <th>Portfolio Name</th>
+			          <th class="text-center">Reablance Percent</th>
+			        </tr>
+			        
+			        			        <tr>
+			          <td>The Royce Fund</td>
+			          <td><a href="#" data-toggle="modal" data-target="#bs-pdf-viewer4"><span class="fa fa-line-chart"></span> Royce Opportunity Fund</a></td>
+			          <td class="text-center"><span class="badge bg-green">50%</span></td>
+
+			        </tr>
+			        			        <tr>
+			          <td>Goldman Sachs Trust</td>
+			          <td><a href="#" data-toggle="modal" data-target="#bs-pdf-viewer4"><span class="fa fa-line-chart"></span> Goldman Sachs Small Cap Value Fund</a></td>
+			          <td class="text-center"><span class="badge bg-green">25%</span></td>
+
+			        </tr>
+			      
+			        			        <tr>
+			          <td>JPMorgan Insurance Trust</td>
+			          <td><a href="#" data-toggle="modal" data-target="#bs-pdf-viewer4"><span class="fa fa-line-chart"></span> JPMorgan Insurance Trust Small Cap Core Portfolio</a></td>
+			          <td class="text-center"><span class="badge bg-green">25%</span></td>
+			        </tr>
+			       
+			       </tbody></table>
+			    </div>
+			    <!-- /.box-body -->
+			  </div><!-- /.box -->
+			  </div>
+          <button class="btn btn-default nextBtn btn-lg pull-right" type="button" >New transaction</button>
+        </div>
+      </div>
+    </div>
+  </form>
+  </div>
+  </div>
+  </div>
+ 
+ <!--
+ <div class="box">
     <div class="box-header">
       <h3 class="box-title">Portfolio Options</h3>
     </div>
-    <!-- /.box-header -->
     <div class="box-body table-responsive no-padding">
       <table class="table table-hover">
        
@@ -199,50 +454,12 @@
         </tr>
        </tbody></table>
     </div>
-    <!-- /.box-body -->
-  </div><!-- /.box -->  
-  
-  
-  
-  
-  <form role="form" action="" method="post">
-    <div class="row setup-content" id="step-1">
-      <div class="col-xs-6 col-md-offset-3">
-        <div class="col-md-12">
-          <h3> Transfer</h3>
-          <div class="form-group">
-            <label class="control-label">First Name</label>
-            <input  maxlength="100" type="text" required="required" class="form-control" placeholder="Enter First Name"  />
-          </div>
-          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
-        </div>
-      </div>
-    </div>
-    <div class="row setup-content" id="step-2">
-      <div class="col-xs-6 col-md-offset-3">
-        <div class="col-md-12">
-          <h3> Review</h3>
-          <div class="form-group">
-            <label class="control-label">Company Name</label>
-            <input maxlength="200" type="text" required="required" class="form-control" placeholder="Enter Company Name" />
-          </div>
-          <button class="btn btn-primary nextBtn btn-lg pull-right" type="button" >Next</button>
-        </div>
-      </div>
-    </div>
-    <div class="row setup-content" id="step-3">
-      <div class="col-xs-6 col-md-offset-3">
-        <div class="col-md-12">
-          <h3> Finalize</h3>
-          <button class="btn btn-success btn-lg pull-right" type="submit">Submit</button>
-        </div>
-      </div>
-    </div>
-  </form>
-  </div>
-  </div>
   </div>
   
+  -->
+  
+  
+   
 <script type="text/javascript">  
 <!-- Wizard Start-->  
 $(document).ready(function () {

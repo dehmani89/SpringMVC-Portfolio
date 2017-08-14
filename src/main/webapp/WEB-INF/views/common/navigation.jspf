@@ -156,4 +156,133 @@
 	    </div>
 	  </div>
 	</div>
+	
+	<!-- PDF modal -->
+	<div class="modal fade" id="bs-pdf-viewer" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      <!-- The content of the model lives in the profile page --> 
+	<div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="gridSystemModalLabel">Sample Statement</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img class="" alt="Sample Statement" src="/adminTemplateImg/sampleStatement.png" style="width: 100%;">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary"><span class="fa  fa-cloud-download"></span> Download PDF</button>
+	      </div>
+		    </div>
+		  </div>
+		</div>
+
+	<!-- portfolio #1 modal -->
+	<div class="modal fade" id="bs-pdf-viewer" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      <!-- The content of the model lives in the profile page --> 
+	<div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="gridSystemModalLabel">Sample Statement</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img class="" alt="Sample Statement" src="/adminTemplateImg/sampleStatement.png" style="width: 100%;">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary"><span class="fa  fa-cloud-download"></span> Download PDF</button>
+	      </div>
+		    </div>
+		  </div>
+		</div>
+		
+		
+		
+	
+	
+	
+	
+	<!-- Portfolio info Section -->
+	<div class="modal fade" id="bs-pdf-viewer1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      <!-- The content of the model lives in the profile page --> 
+			<div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="gridSystemModalLabel">Portfolio Profile</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img class="" alt="Sample Statement" src="/adminTemplateImg/_Ohio National S&P 500.png" style="width: 100%;">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary"><span class="fa  fa-cloud-download"></span> Download PDF</button>
+	      </div>
+		    </div>
+		  </div>
+		</div>
+	<!-- Portfolio info Section -->
+	<div class="modal fade" id="bs-pdf-viewer2" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      <!-- The content of the model lives in the profile page --> 
+			<div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="gridSystemModalLabel">Portfolio Profile</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img class="" alt="Sample Statement" src="/adminTemplateImg/_AB VPS Dynamic Asset Allocation Portfolio.png" style="width: 100%;">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary"><span class="fa  fa-cloud-download"></span> Download PDF</button>
+	      </div>
+		    </div>
+		  </div>
+		</div>
+	<!-- Portfolio info Section -->
+	<div class="modal fade" id="bs-pdf-viewer3" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      <!-- The content of the model lives in the profile page --> 
+			<div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="gridSystemModalLabel">Portfolio Profile</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img class="" alt="Sample Statement" src="/adminTemplateImg/_Fidelity.png" style="width: 100%;">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary"><span class="fa  fa-cloud-download"></span> Download PDF</button>
+	      </div>
+		    </div>
+		  </div>
+		</div>
+	<!-- Portfolio info Section -->
+	<div class="modal fade" id="bs-pdf-viewer4" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+	  <div class="modal-dialog modal-lg" role="document">
+	    <div class="modal-content">
+	      <!-- The content of the model lives in the profile page --> 
+			<div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+	        <h4 class="modal-title" id="gridSystemModalLabel">Portfolio Profile</h4>
+	      </div>
+	      <div class="modal-body">
+	        <img class="" alt="Sample Statement" src="/adminTemplateImg/_Janus INTECH.png" style="width: 100%;">
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	        <button type="button" class="btn btn-primary"><span class="fa  fa-cloud-download"></span> Download PDF</button>
+	      </div>
+		    </div>
+		  </div>
+		</div>				
+
+
+
+
+
+
   

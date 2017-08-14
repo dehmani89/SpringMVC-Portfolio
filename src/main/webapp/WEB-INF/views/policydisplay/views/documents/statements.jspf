@@ -17,29 +17,38 @@
                   <tr>
                     <th>Statement date</th>
                     <th>File Name</th>
-                    <th>Frequency</th>
+                    <th>Frequency/Type</th>
                   </tr>
                   </thead>
                   <tbody>
                   <tr>
-                    <td>07-15-2017</td>
-                    <td><a href="#"><span class="fa fa-file"></span> Account Balance</a></td>
+                    <td>01-01-2017</td>
+                    <td><a href="#" data-toggle="modal" data-target="#bs-pdf-viewer"><span class="fa fa-file"></span> Account Balance</a></td>
                     <td><span class="label label-success">Monthly</span></td>
                   </tr>
                   <tr>
-                    <td>06-15-2017</td>
+                    <td>02-01-2017</td>
+                    <td><a href="#" data-toggle="modal" data-target="#bs-pdf-viewer"><span class="fa fa-file"></span> Account Balance</a></td>
+                    <td><span class="label label-success">Monthly</span></td>
+                  </tr>
+                  <tr>
+                    <td>03-01-2017</td>
+                    <td><a href="#" data-toggle="modal" data-target="#bs-pdf-viewer"><span class="fa fa-file"></span> Account Balance</a></td>
+                    <td><span class="label label-success">Monthly</span></td>
+                  </tr>                                    <tr>
+                    <td>03-30-2017</td>
                     <td><a href="#"><span class="fa fa-file"></span> Quarterly Statement</a></td>
                     <td><span class="label label-warning">Quarterly</span></td>
                    
                   </tr>
                   <tr>
-                    <td>05-15-2017</td>
+                    <td>12-31-2017</td>
                     <td><a href="#"><span class="fa fa-file"></span> End of Year Statement</a></td>
                     <td><span class="label label-danger">Yearly</span></td>
                     
                   </tr>
                   <tr>
-                    <td>04-15-2017</td>
+                    <td>01-01-2018</td>
                     <td><a href="#"><span class="fa fa-file"></span> 1099 Statement</a></td>
                     <td><span class="label label-info">Taxes</span></td>
                     
@@ -51,6 +60,4 @@
             </div>
             <!-- /.box-body -->
           </div>
-
-
 </div>

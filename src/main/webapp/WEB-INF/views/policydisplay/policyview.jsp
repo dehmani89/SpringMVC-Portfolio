@@ -29,13 +29,21 @@
             <div class="box-body">
               <dl class="dl-horizontal">
                 <dt>Short Description</dt>
-                <dd>This is a simple to-do list application. It allows the user to perform typical actions such as Add, Edit, and Delete functionalities on the user's list.</dd>
-                <dt>Delete Button</dt>
-                <dd>Allows a user to delete an item FROM the list.</dd>
-                <dt>Update Button</dt>
-                <dd>Allows a user to update an item FROM the list.</dd>
-                <dt>Add Button</dt>
-                <dd>Allows a user to add a new item TO the list.</dd>
+                <dd>This is a simple Policy Display application that allows users to access their contract, view pertinent information in regards to their contract. As well as make transfers and rebalance their portfolio online.</dd>
+                <dt>Contract Summary</dt>
+                <dd>Allows a user to view information regarding their contract.</dd>
+                <dt>Portfolio Info</dt>
+                <dd>Allows a user to look at their current portfolio elections.</dd>
+                <dt>Transactions</dt>
+                <dd>Allows a user to perform a transaction.</dd>
+                <dt>Documents</dt>
+                <dd>Allows a user to view and download statements.</dd>
+                <dt>Owner/Rep Info</dt>
+                <dd>Allows a user to view agent information as well as edit their own info and their beneficiaries.</dd>
+                 <dt>AWD</dt>
+                <dd>Used for Automated Work Distributor processes.</dd>
+                 <dt>Questions</dt>
+                <dd>Allows a user to chat or contact their agent(s) for questions and or comments.</dd>
               </dl>
             </div>
             <!-- /.box-body -->
@@ -46,7 +54,7 @@
 
 		<!-- New Row -->
 		<div class="row">
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-7">
+			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
 				<!-- Custom Tabs -->
 				<div class="nav-tabs-custom">
 					<ul class="nav nav-tabs">
@@ -64,13 +72,13 @@
 
 						<!-- START OF TAB 1-->
 						<div class="tab-pane active" id="tab_1">
-							<b>Tab 1 Content:</b> <br> <br>
 							<div class="row">
 								<%@include file="views/contractSummary/contractInfo.jspf" %>
-								<%@include file="views/contractSummary/riders.jspf" %>
 								<%@include file="views/contractSummary/payoutRmdInfo.jspf" %>
-								<%@include file="views/contractSummary/fixedrates.jspf" %>
-								<%@include file="views/contractSummary/notes.jspf" %>
+								<%@include file="views/contractSummary/riders.jspf" %>
+																<%@include file="views/contractSummary/fixedrates.jspf" %>
+								
+<%-- 								<%@include file="views/contractSummary/notes.jspf" %> --%>
 							</div>
 							<!-- CLOSE ROW-->
 						</div>
@@ -78,7 +86,6 @@
 
 						<!-- START OF TAB 2-->
 						<div class="tab-pane" id="tab_2">
-							<b>Tab 2 Content:</b> <br> <br>
 							<div class="row">
 								<%@include file="views/portfolioInfo/portfolioInfo.jspf" %>
 								<%@include file="views/portfolioInfo/valuesInfo.jspf" %>
@@ -89,8 +96,6 @@
 
 						<!-- START OF TAB 3-->
 						<div class="tab-pane" id="tab_3">
-							<b>Tab 3 Content:</b> <br> <br>
-
 							<div class="row">
 								<%@include file="views/transactions/requestTransaction.jspf" %>
 							</div>
@@ -99,9 +104,7 @@
 						<!-- END OF TAB 3-->
 
 						<!-- START OF TAB 4-->
-						<div class="tab-pane" id="tab_4">
-							<b>Tab 4 Content:</b> <br> <br>
-							
+						<div class="tab-pane" id="tab_4">							
 							<div class="row">
 								<%@include file="views/documents/statements.jspf" %>
 							</div>
@@ -111,9 +114,7 @@
 						<!-- END OF TAB 4-->
 
 						<!-- START OF TAB 5-->
-						<div class="tab-pane" id="tab_5">
-							<b>Tab 5 Content:</b> <br> <br>
-							
+						<div class="tab-pane" id="tab_5">							
 							<div class="row">
 								<%@include file="views/ownerRepInfo/repInfo.jspf" %>
 								<%@include file="views/ownerRepInfo/ownerInfo.jspf" %>
@@ -125,18 +126,15 @@
 
 						<!-- START OF TAB 6-->
 						<div class="tab-pane" id="tab_6">
-							<b>Tab 6 Content:</b> <br> <br>
 							<div class="row">
-								<%@include file="views/ownerRepInfo/repInfo.jspf" %>
+								<%@include file="views/awd/awd.jspf" %>
 							</div>
 						</div>
 						<!-- /.tab-pane -->
 						<!-- END OF TAB 6-->
 
 						<!-- START OF TAB 7-->
-						<div class="tab-pane" id="tab_7">
-							<b>Tab 7 Content:</b> <br> <br>
-							
+						<div class="tab-pane" id="tab_7">							
 							<div class="row">
 								<%@include file="views/questions/chat.jspf" %>
 							</div>

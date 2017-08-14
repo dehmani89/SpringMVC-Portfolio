@@ -1,4 +1,4 @@
-			<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6">
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 			<div class="box box-primary">
             <div class="box-header with-border ">
               <h3 class="box-title">Payouts/RMD Info</h3>
@@ -9,22 +9,34 @@
             <!-- /.box-header -->
             <div class="box-body">
               <table class="table table-bordered">
-				<caption>ONcore Xtra (9%-8%-7%-6%-5%-4%-2%-1%)</caption>
+				<caption>Systematic Payout Details</caption>
                 <tr>
-                  <td>Plan Type</td>
-                  <td>Non-Qualified Contract</td>
+                  <td>Current Payout</td>
+                  <td>$4,000.00</td>
                 </tr>
                 <tr>
-                  <td>Plan Type</td>
-                  <td>Contract Issue Date</td>
+                  <td>Next Payout Date</td>
+                  <td>09/10/17</td>
                 </tr>
                 <tr>
-                  <td>Plan Type</td>
-                  <td>05/31/2013</td>
+                  <td>Payout Frequency</td>
+                  <td>Monthly</td>
                 </tr>
                 <tr>
-                  <td>Issue State</td>
-                  <td>FL</td>
+                  <td>Payout Option</td>
+                  <td>Specified dollar amount</td>
+                </tr>
+                <tr>
+                  <td>Federal Withholding</td>
+                  <td>40%</td>
+                </tr>
+                <tr>
+                  <td>State Withholding</td>
+                  <td>7%</td>
+                </tr>
+                <tr>
+                  <td>Required Minimum Distribution Amount</td>
+                  <td>$42,724.45</td>
                 </tr>			
 				</table>
             </div>
